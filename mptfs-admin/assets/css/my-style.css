@@ -1,0 +1,55 @@
+table.dataTable > thead > tr > th:not(.sorting_disabled),
+table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-right: 14px !important;
+}
+
+.error {
+  color: red;
+}
+
+.slow .toggle-group {
+  transition: left 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+}
+
+.toggle-on {
+  top: unset;
+}
+
+.toggle-off {
+  top: unset;
+}
+
+.toggle-on.btn-sm {
+  font-size: 14px;
+  padding-right: 15px;
+}
+
+.toggle-off.btn-sm {
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+label:not(.form-check-label):not(.custom-file-label) {
+  font-weight: 500;
+}
+
+.text-style {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.toast-success {
+  background-color: #28a745 !important;
+}
+
+.toast-top-right {
+  top: 15px;
+  right: 15px;
+}
+
+#toast-container > div {
+  opacity: 1;
+}
