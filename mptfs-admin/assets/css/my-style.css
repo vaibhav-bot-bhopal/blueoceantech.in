@@ -3,6 +3,11 @@ table.dataTable > thead > tr > td:not(.sorting_disabled) {
   padding-right: 14px !important;
 }
 
+.dataTable > thead > tr > th[class*="sort"]:before,
+.dataTable > thead > tr > th[class*="sort"]:after {
+  content: "" !important;
+}
+
 .error {
   color: red;
 }

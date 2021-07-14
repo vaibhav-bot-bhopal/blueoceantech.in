@@ -124,18 +124,16 @@ include('includes/admin-footer.php');
             "responsive": true,
             "processing": true,
             "lengthChange": true,
+            "searching": true,
             "autoWidth": false,
-            "columnDefs": [
-                // {
-                //     "targets": [0, 1, 2, 3, 4, 5],
-                //     "className": "dt-center",
-                // },
-                {
-                    "orderable": false,
-                    "targets": [0],
-                }
-            ],
-            dom: 'Brtip',
+            "columnDefs": [{
+                "orderable": false,
+                "targets": [0, 1, 2, 3],
+            }],
+            language: {
+                sLengthMenu: "Show _MENU_ Records"
+            },
+            dom: "<'row'<'col-sm-6'l><'col-sm-6'f>>Brtip",
             buttons: [{
                     extend: 'copy',
                     exportOptions: {

@@ -122,12 +122,16 @@ if ($_SESSION['role'] == 'admin') { ?>
                 "responsive": true,
                 "processing": true,
                 "lengthChange": true,
+                "searching": true,
                 "autoWidth": false,
                 "columnDefs": [{
                     "orderable": false,
                     "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
                 }],
-                dom: 'Brtip',
+                language: {
+                    sLengthMenu: "Show _MENU_ Records"
+                },
+                dom: "<'row'<'col-sm-6'l><'col-sm-6'f>>Brtip",
                 buttons: [{
                         extend: 'copy',
                         exportOptions: {
@@ -161,18 +165,18 @@ if ($_SESSION['role'] == 'admin') { ?>
                 ],
 
                 initComplete: function() {
-                    var city_column = this.api().column(6);
+                    // var city_column = this.api().column(6);
 
-                    var select_city = $('<select class="filter"><option value=""></option></select>')
-                        .appendTo('#selectTriggerCity')
-                        .on('change', function() {
-                            var val = $(this).val();
-                            city_column.search(val ? '^' + $(this).val() + '$' : val, true, false).draw();
-                        });
+                    // var select_city = $('<select class="filter"><option value=""></option></select>')
+                    //     .appendTo('#selectTriggerCity')
+                    //     .on('change', function() {
+                    //         var val = $(this).val();
+                    //         city_column.search(val ? '^' + $(this).val() + '$' : val, true, false).draw();
+                    //     });
 
-                    city_column.data().unique().sort().each(function(d, j) {
-                        select_city.append('<option value="' + d + '">' + d + '</option>');
-                    });
+                    // city_column.data().unique().sort().each(function(d, j) {
+                    //     select_city.append('<option value="' + d + '">' + d + '</option>');
+                    // });
 
                     var place_column = this.api().column(7);
 
@@ -212,18 +216,18 @@ if ($_SESSION['role'] == 'admin') { ?>
                 }, ],
 
                 initComplete: function() {
-                    var city_column = this.api().column(6);
+                    // var city_column = this.api().column(6);
 
-                    var select_city = $('<select class="filter"><option value=""></option></select>')
-                        .appendTo('#selectTriggerCity')
-                        .on('change', function() {
-                            var val = $(this).val();
-                            city_column.search(val ? '^' + $(this).val() + '$' : val, true, false).draw();
-                        });
+                    // var select_city = $('<select class="filter"><option value=""></option></select>')
+                    //     .appendTo('#selectTriggerCity')
+                    //     .on('change', function() {
+                    //         var val = $(this).val();
+                    //         city_column.search(val ? '^' + $(this).val() + '$' : val, true, false).draw();
+                    //     });
 
-                    city_column.data().unique().sort().each(function(d, j) {
-                        select_city.append('<option value="' + d + '">' + d + '</option>');
-                    });
+                    // city_column.data().unique().sort().each(function(d, j) {
+                    //     select_city.append('<option value="' + d + '">' + d + '</option>');
+                    // });
 
                     var place_column = this.api().column(7);
 
