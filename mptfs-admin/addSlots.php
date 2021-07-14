@@ -243,6 +243,6 @@ include('includes/admin-footer.php');
 
             ],
             // "buttons": ["copy", "excel", "pdf", "print", "colvis"],
-        }).buttons().container().appendTo('#tblData_wrapper .col-md-6:eq(0)');
+        });
     });
 </script>
