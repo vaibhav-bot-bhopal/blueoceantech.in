@@ -3,17 +3,14 @@
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = 'offline';
 // Customize this with a different URL if needed.
-// const OFFLINE_URL = 'offline.html';
-const assets = [
-  '/',
-  '/index.php',
-  '/assets/js/script.js',
-  '/assets/js/service-worker.js',
-  '/assets/css/bootstrap.min.css',
-  '/img/logo/favicon.png',
-  '/offline.html'
-
-];
+const OFFLINE_URL = 'offline.html';
+// const ASSETS = [
+//   'offline.html',
+//   'assets/js/script.js',
+//   'assets/js/service-worker.js',
+//   'assets/css/bootstrap.min.css',
+//   'img/logo/favicon.png',
+// ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
@@ -21,10 +18,10 @@ self.addEventListener('install', (event) => {
     // Setting {cache: 'reload'} in the new request will ensure that the response
     // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
     // await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
-    await cache.addAll(assets);
+    await cache.addAll(OFFLINE_URL);
   })());
   // Force the waiting service worker to become the active service worker.
-  self.skipWaiting();
+  // self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
